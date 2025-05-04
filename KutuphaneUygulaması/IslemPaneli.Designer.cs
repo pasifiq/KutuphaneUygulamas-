@@ -92,6 +92,7 @@
             this.ekleKullanicibtn.TabIndex = 1;
             this.ekleKullanicibtn.Text = "            Ekle";
             this.ekleKullanicibtn.UseVisualStyleBackColor = false;
+            this.ekleKullanicibtn.Click += new System.EventHandler(this.ekleKullanicibtn_Click);
             // 
             // guncelleKullanicibtn
             // 

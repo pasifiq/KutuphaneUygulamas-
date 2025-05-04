@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="3cfd35c6f59a4aa482198216602c1c0b" Name="Diagram1">
         <EntityTypeShape EntityType="KutuphaneModel.Personeller" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KutuphaneModel.Kullanicilar" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="KutuphaneModel.Kullanicilar" Width="1.875" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

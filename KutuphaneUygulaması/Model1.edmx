@@ -16,6 +16,7 @@
           <Property Name="kullanici_mail" Type="nchar" MaxLength="50" />
           <Property Name="kullanici_tel" Type="nvarchar" MaxLength="11" />
           <Property Name="kullanici_ceza" Type="float" />
+          <Property Name="kullanici_cinsiyet" Type="nvarchar" MaxLength="1" />
         </EntityType>
         <EntityType Name="Personeller">
           <Key>
