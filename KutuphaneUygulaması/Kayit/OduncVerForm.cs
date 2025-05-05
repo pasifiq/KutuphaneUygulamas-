@@ -20,9 +20,13 @@ namespace KutuphaneUygulaması.Kayit
         KutuphaneEntities db = new KutuphaneEntities();
         private void OduncVerForm_Load(object sender, EventArgs e)
         {
-            //listeleme
+            //listeleme (kayıtlar)
             var kayitList = db.Kayitlar.ToList();
             dataGridView1.DataSource = kayitList.ToList();
+
+            //listeleme(kaynaklar)
+            var kaynakList = db.Kaynaklar.ToList();
+            dataGridView2.DataSource = kaynakList.ToList();
 
             //istenmeyen kaynak ve kullanıcı kolonunu gizleme
             dataGridView1.Columns[6].Visible = false;
@@ -39,6 +43,13 @@ namespace KutuphaneUygulaması.Kayit
                 label2.Text = "Kullanıcı bulunamadı";
 
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string gelenAd = textBox1.Text;
+            var bulunanKaynaklar = db.Kaynaklar.Where(x => x.kaynak_ad.Contains(gelenAd)).ToList();
+            dataGridView2.DataSource = bulunanKaynaklar;
         }
     }
 }
