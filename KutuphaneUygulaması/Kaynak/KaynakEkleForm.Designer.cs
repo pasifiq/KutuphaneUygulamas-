@@ -70,9 +70,9 @@
             this.label2.ForeColor = System.Drawing.Color.Snow;
             this.label2.Location = new System.Drawing.Point(51, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Soyad :";
+            this.label2.Text = "Yazar :";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
