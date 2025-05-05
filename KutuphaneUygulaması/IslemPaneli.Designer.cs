@@ -39,6 +39,7 @@
             this.ekleKaynakbtn = new System.Windows.Forms.Button();
             this.guncelleKaynakbtn = new System.Windows.Forms.Button();
             this.silKaynakbtn = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.silKaynakbtn);
             this.panel1.Controls.Add(this.guncelleKaynakbtn);
             this.panel1.Controls.Add(this.ekleKaynakbtn);
@@ -57,7 +59,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(226, 724);
+            this.panel1.Size = new System.Drawing.Size(226, 967);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -187,6 +189,7 @@
             this.guncelleKaynakbtn.TabIndex = 6;
             this.guncelleKaynakbtn.Text = "            Güncelle";
             this.guncelleKaynakbtn.UseVisualStyleBackColor = false;
+            this.guncelleKaynakbtn.Click += new System.EventHandler(this.guncelleKaynakbtn_Click);
             // 
             // silKaynakbtn
             // 
@@ -205,11 +208,27 @@
             this.silKaynakbtn.UseVisualStyleBackColor = false;
             this.silKaynakbtn.Click += new System.EventHandler(this.silKaynakbtn_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Snow;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 720);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(226, 90);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "            Ödünç Ver";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // IslemPaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 724);
+            this.ClientSize = new System.Drawing.Size(870, 967);
             this.Controls.Add(this.kullaniciBilgiPanel);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -234,5 +253,6 @@
         private System.Windows.Forms.Button guncelleKaynakbtn;
         private System.Windows.Forms.Button ekleKaynakbtn;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -14,6 +14,12 @@ namespace KutuphaneUygulaması
     
     public partial class Kullanicilar
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Kullanicilar()
+        {
+            this.Kayitlar = new HashSet<Kayitlar>();
+        }
+    
         public int kullanici_id { get; set; }
         public string kullanici_ad { get; set; }
         public string kullanici_soyad { get; set; }
@@ -21,5 +27,8 @@ namespace KutuphaneUygulaması
         public string kullanici_mail { get; set; }
         public string kullanici_tel { get; set; }
         public Nullable<double> kullanici_ceza { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Kayitlar> Kayitlar { get; set; }
     }
 }
