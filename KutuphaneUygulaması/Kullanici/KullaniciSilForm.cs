@@ -23,6 +23,8 @@ namespace KutuphaneUygulaması.Kullanici
 
             var kullanicilar = db.Kullanicilar.ToList();
             dataGridView1.DataSource = kullanicilar.ToList();
+            //kayıtlar kolonunu gizleme
+            dataGridView1.Columns[7].Visible = false;
         }
 
         private void KullaniciSilForm_Load(object sender, EventArgs e)

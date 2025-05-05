@@ -22,6 +22,9 @@ namespace KutuphaneUygulaması
             KutuphaneEntities db = new KutuphaneEntities();
             var kullanicilar = db.Kullanicilar.ToList();
             dataGridView1.DataSource = kullanicilar.ToList();
+
+            //kayıtlar kolonunu gizleme
+            dataGridView1.Columns[7].Visible = false;
         }
         private void KullaniciListeForm_Load(object sender, EventArgs e)
         {

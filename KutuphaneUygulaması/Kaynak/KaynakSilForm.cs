@@ -22,6 +22,8 @@ namespace KutuphaneUygulaması.Kaynak
         {
             var kaynaklar = db.Kaynaklar.ToList();
             dataGridView1.DataSource = kaynaklar.ToList();
+            //kayıtlar kolonunu gizleme
+            dataGridView1.Columns[6].Visible = false;
 
         }
 

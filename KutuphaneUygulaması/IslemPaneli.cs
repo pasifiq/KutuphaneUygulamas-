@@ -34,6 +34,8 @@ namespace KutuphaneUygulaması
             silKaynakbtn.Visible = false;   
         }
 
+        private KullaniciListeForm klisteForm;
+
         private void button1_Click(object sender, EventArgs e)
         {
             if(ekleKullanicibtn.Visible == false)
@@ -41,25 +43,46 @@ namespace KutuphaneUygulaması
                 ekleKullanicibtn.Visible = true;
                 guncelleKullanicibtn.Visible = true;
                 silKullanicibtn.Visible = true;
+                klisteForm = new KullaniciListeForm();
+                klisteForm.MdiParent = this;
+                klisteForm.Show();
             }
             else
             {
                 ekleKullanicibtn.Visible = false;
                 guncelleKullanicibtn.Visible = false;
                 silKullanicibtn.Visible = false;
+                klisteForm.Close();
             }   
 
-           KullaniciListeForm klisteForm = new KullaniciListeForm();
-            klisteForm.MdiParent = this;
-            klisteForm.Show();
+          
 
         }
 
+        private KullaniciEkleForm ekleForm;
+        private bool ekleKullaniciDurum = false;
+
+
         private void ekleKullanicibtn_Click(object sender, EventArgs e)
         {
-            KullaniciEkleForm ekleForm = new KullaniciEkleForm();
-            ekleForm.MdiParent = this;
-            ekleForm.Show();
+
+            if (ekleKullaniciDurum == false)
+            {
+                ekleForm = new KullaniciEkleForm();
+                ekleForm.MdiParent = this;
+                ekleForm.Show();
+                ekleKullaniciDurum = true;
+
+
+            }
+            else 
+            {
+                ekleForm.Close();
+                ekleKullaniciDurum = false;
+
+            }
+
+           
         }
 
         private void silKullanicibtn_Click(object sender, EventArgs e)
@@ -99,6 +122,7 @@ namespace KutuphaneUygulaması
             KaynakListeForm kliste = new KaynakListeForm();
             kliste.MdiParent = this;
             kliste.Show();
+            
         }
 
         private void ekleKaynakbtn_Click(object sender, EventArgs e)

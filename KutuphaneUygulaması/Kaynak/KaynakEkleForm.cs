@@ -43,5 +43,10 @@ namespace KutuphaneUygulaması.Kaynak
             dataGridView1.DataSource = kliste.ToList();
 
         }
+
+        private void KaynakEkleForm_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

@@ -28,6 +28,9 @@ namespace KutuphaneUygulaması.Kullanici
         private void KullaniciGuncelleForm_Load(object sender, EventArgs e)
         {
             Listele();
+
+            //kayıtlar kolonunu gizleme
+            dataGridView1.Columns[7].Visible = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
