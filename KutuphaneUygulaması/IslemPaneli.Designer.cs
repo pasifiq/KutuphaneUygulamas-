@@ -83,6 +83,7 @@
             this.guncelleKullanicibtn.TabIndex = 2;
             this.guncelleKullanicibtn.Text = "            Güncelle";
             this.guncelleKullanicibtn.UseVisualStyleBackColor = false;
+            this.guncelleKullanicibtn.Click += new System.EventHandler(this.guncelleKullanicibtn_Click);
             // 
             // ekleKullanicibtn
             // 
