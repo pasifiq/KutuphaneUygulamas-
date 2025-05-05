@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KutuphaneUygulaması.Kaynak;
 using KutuphaneUygulaması.Kullanici;
 
 namespace KutuphaneUygulaması
@@ -21,10 +22,15 @@ namespace KutuphaneUygulaması
         KutuphaneEntities db = new KutuphaneEntities(); 
         private void IslemPaneli_Load(object sender, EventArgs e)
         {
+            //kullanıcı butonları girişte kapalı (ekle güncelle sil)
             ekleKullanicibtn.Visible = false;
             guncelleKullanicibtn.Visible = false;
             silKullanicibtn.Visible = false;
-           
+
+           //kitap butonları girişte kapalı (ekle güncelle sil)
+            ekleKaynakbtn.Visible = false;
+            guncelleKaynakbtn.Visible = false;
+            silKaynakbtn.Visible = false;   
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -67,6 +73,45 @@ namespace KutuphaneUygulaması
             KullaniciGuncelleForm kGuncel = new KullaniciGuncelleForm();
             kGuncel.MdiParent = this;
             kGuncel.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(ekleKaynakbtn.Visible == false)
+            {
+                ekleKaynakbtn.Visible = true;
+                guncelleKaynakbtn.Visible = true;
+                silKaynakbtn.Visible = true;
+            }
+            else
+            {
+                ekleKaynakbtn.Visible = false;
+                guncelleKaynakbtn.Visible = false;
+                silKaynakbtn.Visible = false;
+            }
+
+            KaynakListeForm kliste = new KaynakListeForm();
+            kliste.MdiParent = this;
+            kliste.Show();
+        }
+
+        private void ekleKaynakbtn_Click(object sender, EventArgs e)
+        {
+            KaynakEkleForm kEkle = new KaynakEkleForm();
+            kEkle.MdiParent = this;
+            kEkle.Show();
+        }
+
+        private void silKaynakbtn_Click(object sender, EventArgs e)
+        {
+            KaynakSilForm kSil = new KaynakSilForm();
+            kSil.MdiParent = this;
+            kSil.Show();
         }
     }
 }
